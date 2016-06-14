@@ -1,4 +1,4 @@
-# Logic for Fascist AI on how to deal in peace conferences
+# Logic for Communist AI on how to deal in peace conferences
 # Should favor annexing other nations and taking their states
 # Written by Henrik "Groogy" Hansson
 
@@ -12,11 +12,11 @@ communist_peace = {
 	puppet_randomness = 400
 	take_states_randomness = 200
 	force_government_randomness = 100
-	
+
 	# ROOT = Taker, FROM = Giver
 	annex = {
 		factor = 500
-		
+
 		modifier = {
 			factor = 0
 			NOT = {
@@ -24,13 +24,13 @@ communist_peace = {
 			}
 			NOT = {
 				has_annex_war_goal = FROM
-			}			
-		}	
+			}
+		}
 
 		modifier = {
 			factor = 0
 			is_puppet = yes
-		}		
+		}
 	}
 
 	# ROOT = Taker, FROM = Liberated
@@ -45,11 +45,11 @@ communist_peace = {
 					target = FROM
 					value > 0
 				}
-			}		
+			}
 			NOT = {
 				FROM = {
 					has_government = communist
-				}			
+				}
 			}
 		}
 	}
@@ -196,7 +196,7 @@ communist_peace = {
 		}
 
 		modifier = {
-			factor = 0		
+			factor = 0
 			NOT = { FROM = { is_claimed_by = ROOT } }
 			NOT = {
 				FROM = {
@@ -221,7 +221,7 @@ communist_peace = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_puppet = yes
