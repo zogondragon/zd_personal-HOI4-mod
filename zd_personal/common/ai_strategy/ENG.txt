@@ -20,17 +20,17 @@ protect_poland_against_germany = {
 	abort = {
 		NOT = { country_exists = POL }
 	}
-	
+
 	ai_strategy = {
 		type = befriend
-		id = "POL"			
+		id = "POL"
 		value = 200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "POL"			
+		id = "POL"
 		value = 200
-	}	
+	}
 }
 
 defend_poland_against_germany = {
@@ -42,17 +42,17 @@ defend_poland_against_germany = {
 	abort = {
 		NOT = { country_exists = POL }
 	}
-	
+
 	ai_strategy = {
 		type = befriend
-		id = "POL"			
+		id = "POL"
 		value = 200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "POL"			
+		id = "POL"
 		value = 200
-	}	
+	}
 }
 
 royal_air_force = {
@@ -61,15 +61,13 @@ royal_air_force = {
 		date > 1937.12.31
 	}
 	abort = {
-		NOT = { 
-			tag = ENG 
-			date > 1937.12.31 
+		NOT = {
+			tag = ENG
+			date > 1937.12.31
 		}
 	}
-	
 	ai_strategy = {
 		type = air_factory_balance
 		value = 300
 	}
-
 }

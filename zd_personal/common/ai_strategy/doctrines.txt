@@ -11,7 +11,7 @@ stop_making_horsies = {
 		type = unit_ratio
 		id = cavalry
 		value = -100 # -100% cav
-	}		
+	}
 }
 
 ############
@@ -37,11 +37,11 @@ no_cavalry = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = cavalry
-		value = -100 
+		value = -100
 	}
 }
 
@@ -53,13 +53,13 @@ mobile_warfare_ratios = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = armor
 		value = 30 # +30% armor
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = motorized
@@ -69,9 +69,9 @@ mobile_warfare_ratios = {
 	ai_strategy = {
 		type = unit_ratio
 		id = mechanized
-		value = 50 # +50% motorized
+		value = 50 # +50% mechanized
 	}
-	
+
 }
 
 superior_firepower_ratios = {
@@ -81,13 +81,13 @@ superior_firepower_ratios = {
 	abort = {
 		has_tech = concentrated_fire_plans
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = infantry
 		value = 30
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = motorized
@@ -105,7 +105,7 @@ superior_firepower_ratios = {
 		id = artillery
 		value = 30
 	}
-	
+
 }
 
 ## Later in superior_firepower tree
@@ -116,13 +116,13 @@ concentrated_fire_plans_ratios = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = infantry
 		value = -20
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = motorized
@@ -152,7 +152,7 @@ concentrated_fire_plans_ratios = {
 		id = cas
 		value = 20
 	}
-	
+
 }
 
 
@@ -163,13 +163,13 @@ grand_battle_plan_ratios = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = infantry
 		value = 25
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = motorized
@@ -181,14 +181,14 @@ grand_battle_plan_ratios = {
 		id = mechanized
 		value = 25
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = anti_tank
 		value = 20
-	}	
+	}
 
-	
+
 }
 
 
@@ -199,12 +199,12 @@ mass_assault_ratios = {
 	abort = {
 		has_tech = large_front_operations
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = infantry
 		value = 50
-	}	
+	}
 
 	ai_strategy = {
 		type = unit_ratio
@@ -228,7 +228,7 @@ large_front_operations_ratios = {
 		id = infantry
 		value = -10
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = motorized
@@ -246,7 +246,7 @@ large_front_operations_ratios = {
 		id = armor
 		value = 30
 	}
-	
+
 }
 
 
@@ -335,7 +335,7 @@ air_superiority_ratios = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
@@ -347,19 +347,19 @@ air_night_day_bombing_ratios = {
 	enable = {
 		OR = {
 			has_tech = night_bombing
-			has_tech = day_bombing		
+			has_tech = day_bombing
 		}
 	}
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = strategic_bomber
 		value = 50
 	}
-	
+
 }
 
 #Battlefield Support tree
@@ -370,7 +370,7 @@ formation_flying = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = interceptor
@@ -392,11 +392,11 @@ force_rotation = {
 	abort = {
 		always = no
 	}
-	
+
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
 		value = 30
 	}
-	
+
 }
