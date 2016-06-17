@@ -1,3 +1,54 @@
+# R4 - 2016-06-17
+* In /common/defines/
+  - In '00_graphics.lua', many graphic variables exist.
+* In /common/idea_tags/
+  - government, research/production teams, military staffs hiring value.
+* In /common/ideas/
+  - Various laws and national spirits resides in here.
+  - Political advisors are in [nation name].txt.
+  - `allowed` condition is for FRA tag. `allowed_civil_war` is for civil war
+  situation. Does every civil war country receive certain national spirits?
+  - Manufacturers are also in [nation name].txt.
+* In /common/ideologies/
+  - In '00_ideologies.txt', there are many sub-ideologies for democratic,
+  fascist, and communist. Dynamic faction names and sub-ideologies means future
+  DLC will expand upon internal / external politics.
+  - `ai_democratic`. Interesting.
+* In /common/names/
+  - In '00_names.txt', name generation happens here.
+* In /common/national_focus/
+  - `hidden_effect` seems fun.
+* In /common/scripted_triggers/
+  - This file can serve as macros for readability. Complex triggers can be
+  defined here and modders can use it by calling it.
+* In /common/technologies/
+  - `ai_research_weights` used for weighting certain unit types for AI research.
+  - Technology tags are in '00_technology.txt'.
+  -
+* In /common/timed_activities/
+  - There is only one file: '00_stage_coup.txt'.
+* In /common/unit_leader/
+  - Naval leader skill progression is weird. `naval_hit_chance` is linearly
+  increased per skill level, but `naval_coordination` is different for 1~5 skills
+  and 6~9 skills. I don't think there is a significant difference between
+  linear progression and current piecewise linear progression. So I modifed this.
+  - In '00_traits.txt', `ranger` trait gains xp from `is_fighting_in_terrain=hills`
+  and `is_fighting_in_terrain=forest`, but only gains combat modifier for forest.
+  Also, there is already a trait called `hill_fighter`. So gaining hills xp for
+  ranger trait is quite redundant. Possible bug?
+  - `bearer_of_artillery` is disabled. Why?
+  - `blockade_runner` is not gainable. Why?
+* In /common/units/
+  - Battlecruiser, rather than Battle Cruiser.
+  - __TYPO:__ in '00_names.txt': Mountaineer Division instead of Mounaineer
+  Division.
+* AI improvement plan
+  - __TODO:__ AI strategic redeployment behavior is a real mess. Temporarily
+  disabling it or making the minimum range for strategic redeployment is my
+  solution until 1.10 patch.
+    - (do something)
+
+
 # R3 - 2016-06-16
 * In /common/defines/
   - In '00_defines.lua', there are many global constants for gaming.
@@ -18,17 +69,18 @@
   have lower movement speed compared to INF divisions, because ART is heavy
   equipment. However, with ample research and upgrades ART and R-ART should be
   a force to be reckoned with.
-    - Artillery land movement decreased from 4.0kph to 3.6kph.
+    - __TODO:__ Artillery land movement decreased from 4.0kph to 3.6kph.
+    - __TODO:__ Artillery equipment soft attack decreased from x to y.
   - INF: AI tend to use pure INF divisions, so a little buff to INF can be good
   for single player experience.
-    - Infantry land movement 4.0kph -> 4.5kph. Same for all special forces.
+    - __TODO:__ Infantry soft attack increased from x to y.
   - Planning bonus and entrenchment: especially for Grand Battleplan doctrine,
   max planning bonus is insanely strong. +100% attack for almost 100 days is
   just insane. It can cancel out almost every defensive position. The reason
   that AI is weak at defense is the player planning bonus advantage. On the other
   hand, entrenchment is not scaling well to the progress of land doctrines.
     - `PLANNING_MAX` reduced from 0.5 to 0.3.
-    - Max entrenchment bonuses are assigned to various land doctrine techs.
+    - __TODO:__ Max entrenchment bonuses are assigned to various land doctrine techs.
 * Air warfare balancing plan
   - NAV: Naval Strike mission and Port Strike mission are ridiculously effective
   against ships, both combat impact and IC impact wise.
